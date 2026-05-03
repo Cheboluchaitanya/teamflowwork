@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TeamFlow design system — vibrant productivity vibe (Asana/ClickUp inspired) */
+
+@layer base {
+  :root {
+    --background: 250 50% 98%;
+    --foreground: 240 24% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 24% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 24% 12%;
+
+    /* Vibrant indigo/violet primary */
+    --primary: 256 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 270 90% 72%;
+
+    --secondary: 250 40% 96%;
+    --secondary-foreground: 240 24% 12%;
+
+    --muted: 240 20% 95%;
+    --muted-foreground: 240 8% 46%;
+
+    --accent: 190 90% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 152 70% 42%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 95% 55%;
+    --warning-foreground: 0 0% 10%;
+
+    --destructive: 358 80% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 20% 91%;
+    --input: 240 20% 91%;
+    --ring: 256 84% 60%;
+
+    --radius: 0.85rem;
+
+    /* Status hues for projects/tasks */
+    --status-pending: 38 95% 55%;
+    --status-progress: 217 91% 60%;
+    --status-completed: 152 70% 42%;
+    --status-rejected: 358 80% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(256 84% 60%), hsl(280 90% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(190 90% 50%), hsl(217 91% 60%));
+    --gradient-sunset: linear-gradient(135deg, hsl(330 85% 62%), hsl(38 95% 60%));
+    --gradient-mesh: radial-gradient(at 20% 20%, hsl(256 84% 60% / 0.15) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(190 90% 50% / 0.15) 0px, transparent 50%),
+                     radial-gradient(at 80% 80%, hsl(330 85% 62% / 0.12) 0px, transparent 50%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsl(240 24% 12% / 0.04);
+    --shadow-md: 0 4px 16px -4px hsl(240 24% 12% / 0.08);
+    --shadow-lg: 0 12px 32px -8px hsl(256 84% 60% / 0.18);
+    --shadow-glow: 0 0 32px hsl(270 90% 72% / 0.35);
+
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 24% 12%;
+    --sidebar-primary: 256 84% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 250 40% 96%;
+    --sidebar-accent-foreground: 256 84% 60%;
+    --sidebar-border: 240 20% 91%;
+    --sidebar-ring: 256 84% 60%;
+  }
+
+  .dark {
+    --background: 240 24% 8%;
+    --foreground: 250 40% 98%;
+    --card: 240 22% 11%;
+    --card-foreground: 250 40% 98%;
+    --popover: 240 22% 11%;
+    --popover-foreground: 250 40% 98%;
+    --primary: 270 90% 72%;
+    --primary-foreground: 240 24% 8%;
+    --primary-glow: 256 84% 60%;
+    --secondary: 240 18% 16%;
+    --secondary-foreground: 250 40% 98%;
+    --muted: 240 18% 16%;
+    --muted-foreground: 240 10% 65%;
+    --accent: 190 90% 50%;
+    --accent-foreground: 240 24% 8%;
+    --border: 240 18% 18%;
+    --input: 240 18% 18%;
+    --ring: 270 90% 72%;
+    --sidebar-background: 240 22% 11%;
+    --sidebar-foreground: 250 40% 98%;
+    --sidebar-primary: 270 90% 72%;
+    --sidebar-primary-foreground: 240 24% 8%;
+    --sidebar-accent: 240 18% 16%;
+    --sidebar-accent-foreground: 270 90% 72%;
+    --sidebar-border: 240 18% 18%;
+    --sidebar-ring: 270 90% 72%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer utilities {
+  .bg-gradient-primary { background: var(--gradient-primary); }
+  .bg-gradient-accent { background: var(--gradient-accent); }
+  .bg-gradient-sunset { background: var(--gradient-sunset); }
+  .bg-mesh { background-image: var(--gradient-mesh); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-elegant { box-shadow: var(--shadow-lg); }
+  .transition-base { transition: var(--transition-base); }
+}
