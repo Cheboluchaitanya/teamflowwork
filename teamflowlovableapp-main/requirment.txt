@@ -1,0 +1,14 @@
+Java==17
+Maven==3.9
+SpringBoot
+SpringWeb
+SpringDataJPA
+PostgreSQL-Driver
+Lombok
+Node.js==18
+npm
+react==18
+react-dom==18
+axios
+react-router-dom
+vite
