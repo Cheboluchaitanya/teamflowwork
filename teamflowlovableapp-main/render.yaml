@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: java-app
+    env: java
+    buildCommand: "./mvnw clean package"
+    startCommand: "java -jar target/your-app.jar"
